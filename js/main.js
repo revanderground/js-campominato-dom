@@ -7,24 +7,25 @@ button.addEventListener('click', function(){
     gridContainer.innerHTML = "";
     const userChoice = document.getElementById('input-difficulty').value;
     let cellsNumber;
+    let minNumber=1;
+    let maxNumber;
     
     // selezione
     if (userChoice == "level-1"){
         cellsNumber=101;
-        let minNumber=1;
-        let maxNumber=100;
+        maxNumber=cellsNumber-1;
 
       
     } else if (userChoice == "level-2"){
         cellsNumber=82;
         let minNumber=1;
-        let maxNumber=81;
+        maxNumber=cellsNumber-1;
 
 
     } else if (userChoice == "level-3"){
         cellsNumber=50;
         let minNumber=1;
-        let maxNumber=49;
+        maxNumber=cellsNumber-1;
         
  
     }
