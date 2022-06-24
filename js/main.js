@@ -18,13 +18,11 @@ button.addEventListener('click', function(){
       
     } else if (userChoice == "level-2"){
         cellsNumber=82;
-        let minNumber=1;
         maxNumber=cellsNumber-1;
 
 
     } else if (userChoice == "level-3"){
         cellsNumber=50;
-        let minNumber=1;
         maxNumber=cellsNumber-1;
         
  
