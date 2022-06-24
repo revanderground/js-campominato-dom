@@ -33,7 +33,7 @@ button.addEventListener('click', function(){
     for (let i=0; 1<16; i++){
         let newUniqueNum= getRandomUniqueNumber(currentBlackList, minNumber, maxNumber);
         currentBlackList.push(newUniqueNum);
-        console.log(randomNumber);
+        console.log(newUniqueNum);
     }   
 
     // ciclo per generare quadratini
@@ -80,7 +80,7 @@ function getRandomUniqueNumber(blacklist,min,max){
     while(isNumberValid==false){
         randomNumber= Math.floor(Math.random() * max) + min;;
         if (!blacklist.includes(randomNumber)){
-            isInvalid=true;
+            isNumberValid=true;
         }
     }
 
