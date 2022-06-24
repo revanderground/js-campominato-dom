@@ -86,7 +86,9 @@ div.square.azure{
     background-color: rgb(0, 200, 255);
 }
 
-
+div.square.red{
+    background-color: rgb(255, 0, 81);
+}
 
 div.grid-container,
 div.square,

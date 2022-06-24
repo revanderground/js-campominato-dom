@@ -13,24 +13,24 @@ button.addEventListener('click', function(){
     // selezione
     if (userChoice == "level-1"){
         cellsNumber=101;
-        maxNumber=cellsNumber-1;
+        maxNumber=100;
 
       
     } else if (userChoice == "level-2"){
         cellsNumber=82;
-        maxNumber=cellsNumber-1;
+        maxNumber=81;
 
 
     } else if (userChoice == "level-3"){
         cellsNumber=50;
-        maxNumber=cellsNumber-1;
+        maxNumber=49;
         
  
     }
 
     let currentBlackList=[]
 
-    for (let i=0; 1<16; i++){
+    for (let i=0; i<16; i++){
         let newUniqueNum= getRandomUniqueNumber(currentBlackList, minNumber, maxNumber);
         currentBlackList.push(newUniqueNum);
         console.log(newUniqueNum);
@@ -45,15 +45,29 @@ button.addEventListener('click', function(){
         newSquare.style.width=squareSide;
         newSquare.style.height=squareSide;
 
+
+
         // funzione per colorare d'azzuro i quadratini
         newSquare.addEventListener('click', function(){
-            newSquare.classList.toggle('azure');
-            console.log(`hai cliccato sulla cella ${i}`);
+            let whiteList=[];
+
+            if (!currentBlackList.includes(i)){
+                greenPass=true;
+                newSquare.classList.add('azure');
+                console.log(`hai cliccato sulla cella ${i}`);
+                whiteList.push(i);
+           
+            } else if(!currentBlackList.includes(i)==false){
+                greenpass=false;
+                newSquare.classList.add('red');
+                console.log(`hai cliccato sulla bomba sulla cella ${i}`); 
+
+            }
+
             
+
         })
     }
-
-
 
 })
 
